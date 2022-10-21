@@ -23,12 +23,19 @@ function onAddBtnClicked()
   let number1 = Number(num1.value);
   const num2 = document.getElementById("num2");
   let number2 = Number(num2.value);
+  const messagePara = document.getElementById("messagePara");
 
+
+  if (isNaN(number1) || isNaN(number2)) {
+    messagePara.innerHTML =
+      "One or more of your input values are invalid";
+  return; 
+  }
   let answer = number1 + number2;
 
   const ans = document.getElementById("answer");
   ans.value = answer;
-  
+  messagePara.innerHTML = "";
 }
 
 
@@ -38,12 +45,20 @@ function onSubBtnClicked()
   let number1 = Number(num1.value);
   const num2 = document.getElementById("num2");
   let number2 = Number(num2.value);
+  const messagePara = document.getElementById("messagePara");
+
+
+  if (isNaN(number1) || isNaN(number2)) {
+    messagePara.innerHTML =
+      "One or more of your input values are invalid";
+  return; 
+  }
 
   let answer = number1 - number2;
 
   const ans = document.getElementById("answer");
   ans.value = answer;
- 
+  messagePara.innerHTML = "";
   
 }
 function onMulBtnClicked()
@@ -52,12 +67,20 @@ function onMulBtnClicked()
   let number1 = Number(num1.value);
   const num2 = document.getElementById("num2");
   let number2 = Number(num2.value);
+  const messagePara = document.getElementById("messagePara");
+
+
+  if (isNaN(number1) || isNaN(number2)) {
+    messagePara.innerHTML =
+      "One or more of your input values are invalid";
+  return; 
+  }
 
   let answer = number1 * number2;
 
   const ans = document.getElementById("answer");
   ans.value = answer;
- 
+  messagePara.innerHTML = "";
   
 }
 function onDivBtnClicked()
@@ -66,11 +89,18 @@ function onDivBtnClicked()
   let number1 = Number(num1.value);
   const num2 = document.getElementById("num2");
   let number2 = Number(num2.value);
+  const messagePara = document.getElementById("messagePara");
+
+  if (isNaN(number1) || isNaN(number2)) {
+    messagePara.innerHTML =
+      "One or more of your input values are invalid";
+  return; 
+  }
 
   let answer = number1 / number2;
 
   const ans = document.getElementById("answer");
   ans.value = answer;
- 
+  messagePara.innerHTML = "";
   
 }
